@@ -1,5 +1,5 @@
 # flow-remove-types-recursive
-Apply flow-remove-types to directories
+Apply `flow-remove-types` to directories
 
 ## Install
 ```shell
