@@ -4,14 +4,14 @@ import { fileURLToPath } from 'node:url'
 import { test } from 'uvu'
 import * as assert  from 'uvu/assert'
 
-import { run } from '../../main/js/index.js'
+import { removeFlowTypesRecursive } from '../../main/js/index.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const fixtures = resolve(__dirname, '../fixtures')
-const temp = resolve(__dirname, '../temp')
+const temp = resolve(__dirname, '../temp/api')
 
 test('removes flow types for all files', async () => {
-  await run(fixtures, temp)
+  await removeFlowTypesRecursive(fixtures, temp)
   const contents = `//      
 
 export const foo = (str        )         => str

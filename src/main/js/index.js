@@ -3,7 +3,7 @@ import { relative, resolve, dirname } from 'node:path'
 import flowRemoveTypes from 'flow-remove-types'
 import fastGlob from 'fast-glob'
 
-export const run = async (src, dst) => {
+export const removeFlowTypesRecursive = async (src, dst) => {
   const baseIn = resolve(process.cwd(), src)
   const baseOut = resolve(process.cwd(), dst)
   const inputs = fastGlob.sync(`${src}/**`, { onlyFiles: true, absolute: true })
