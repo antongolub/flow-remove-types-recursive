@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Apply flow-remove-types to directories",
   "type": "module",
+  "bin": "./src/main/js/cli.js",
   "exports": "./src/main/js/index.js",
   "scripts": {
     "test": "c8 uvu ./src/test/js && c8 report -r lcov"
