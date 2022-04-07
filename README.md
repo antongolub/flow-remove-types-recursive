@@ -11,7 +11,8 @@ Apply [`flow-remove-types`](https://github.com/facebook/flow/tree/main/packages/
 # npm
 npm i flow-remove-types-recursive
 
-# yarn add flow-remove-types-recursive
+# yarn
+yarn add flow-remove-types-recursive
 ```
 
 ## Usage
