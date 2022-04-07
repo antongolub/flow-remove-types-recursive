@@ -56,8 +56,13 @@ jobs:
       - name: Fetch deps
         run: npm ci
 
-      - name: Run tests
+      - name: Run tests (linux)
+        if: matrix.os == 'ubuntu-20.04'
         run: timeout 30 npm run test
+
+      - name: Run tests (windows)
+        if: matrix.os == 'windows-2019'
+        run: echo 'withTimeout(30000)`npm run test`' | npx zx --experimental
 
   release:
     name: Release
