@@ -57,7 +57,7 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: npm run test
+        run: timeout 30 npm run test
 
   release:
     name: Release
